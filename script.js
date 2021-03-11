@@ -27,6 +27,7 @@ function init() {
 }
 
 startBtn.addEventListener("click", init);
+
 init();
 
 // a number between 1 and 4
@@ -99,7 +100,7 @@ rollButton.addEventListener("click", function () {
     rollButton.textContent = "Roll Again";
 
     // creates a space between each element
-    console.log(rolls.join(" + "));
+    console.log(rolls.join(" "));
   } else {
     init();
   }
