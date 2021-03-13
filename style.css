@@ -87,7 +87,8 @@ body {
 }
 
 #start_btn:active {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: black;
   cursor: grabbing;
   transform: translateY(4px);
 }
