@@ -100,7 +100,7 @@ rollButton.addEventListener("click", function () {
     rollButton.textContent = "Roll Again";
 
     // creates a space between each element
-    console.log(rolls.join(" "));
+    console.log(rolls.join(" + "));
   } else {
     init();
   }
