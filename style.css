@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30%;
+  margin-top: 15%;
   /* text-align: center; */
   border-radius: 6px;
   background-color: rgb(228, 34, 0);
@@ -57,12 +57,12 @@ body {
 
 #Roll_btn:hover {
   opacity: 1;
-  background-color: rgb(228, 34, 0);
+  background-color: rgb(112, 112, 112);
   cursor: pointer;
 }
 
 #Roll_btn:active {
-  background-color: rgb(255, 204, 0);
+  background-color: rgb(216, 173, 1);
   cursor: grabbing;
   transform: translateY(4px);
 }
