@@ -90,7 +90,7 @@ rollBtn.addEventListener("click", function () {
       dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
-      // changes text of Button
+      // changes text of Button during roll
       rollBtn.textContent = "Roll Again";
       rollBtn.style.color = "";
       startBtn.style.display = "";
@@ -110,8 +110,6 @@ rollBtn.addEventListener("click", function () {
     startBtn.style.display = "";
 
     console.log(`Rolling dice...`);
-
-    // creates a space between each element
   } else {
     init();
   }
