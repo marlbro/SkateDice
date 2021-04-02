@@ -1,5 +1,5 @@
 // html elements
-const rollButton = document.getElementById("Roll_btn");
+const rollBtn = document.getElementById("Roll_btn");
 const startBtn = document.getElementById("start_btn");
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
@@ -24,7 +24,7 @@ function init() {
   dice3.textContent = "";
   dice4.textContent = "";
 
-  rollButton.textContent = "Roll Dice";
+  rollBtn.textContent = "Roll Dice";
   startBtn.style.display = "none";
 }
 
@@ -62,7 +62,7 @@ const diceArr4 = [
 // element-specific images using if/else statements?
 // trick-specific combinations using if/else statements?
 
-rollButton.addEventListener("click", function () {
+rollBtn.addEventListener("click", function () {
   init();
 
   rolling = true;
@@ -91,8 +91,8 @@ rollButton.addEventListener("click", function () {
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
       // changes text of Button
-      rollButton.textContent = "Roll Again";
-      rollButton.style.color = "";
+      rollBtn.textContent = "Roll Again";
+      rollBtn.style.color = "";
       startBtn.style.display = "";
 
       // displays text in console
@@ -105,8 +105,8 @@ rollButton.addEventListener("click", function () {
     rolls.push(diceArr3[diceNum_3].toLowerCase());
     rolls.push(diceArr4[diceNum_4].toLowerCase());
 
-    rollButton.textContent = "Rolling..";
-    rollButton.style.color = "Yellow";
+    rollBtn.textContent = "Rolling..";
+    rollBtn.style.color = "Yellow";
     startBtn.style.display = "";
 
     console.log(`Rolling dice...`);
