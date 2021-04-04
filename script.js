@@ -1,12 +1,14 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
 const startBtn = document.getElementById("start_btn");
+
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
 const dice3 = document.getElementById("dice-3");
 const dice4 = document.getElementById("dice-4");
 
 const allDice = document.querySelector(".dice");
+const skateLog = document.querySelector(".SkateLog");
 
 // game state variables
 let rolling;
@@ -26,6 +28,7 @@ function init() {
 
   rollBtn.textContent = "Roll Dice";
   startBtn.style.display = "none";
+  skateLog.style.display = "none";
 }
 
 startBtn.addEventListener("click", init);
@@ -94,9 +97,15 @@ rollBtn.addEventListener("click", function () {
       rollBtn.textContent = "Roll Again";
       rollBtn.style.color = "";
       startBtn.style.display = "";
+      skateLog.style.display = "block";
 
       // displays text in console
       console.log(rolls.join(" + "));
+
+      // displays each roll in textarea box
+      const rollsDisplay = rolls.join(" + ");
+
+      skateLog.textContent = `${rollsDisplay}`;
     }, 1200);
 
     // 4 dice, all pushed into 1 array
@@ -108,6 +117,8 @@ rollBtn.addEventListener("click", function () {
     rollBtn.textContent = "Rolling..";
     rollBtn.style.color = "Yellow";
     startBtn.style.display = "none";
+
+    skateLog.style.display = "block";
 
     console.log(`Rolling dice...`);
   } else {

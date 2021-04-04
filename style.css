@@ -13,7 +13,6 @@ h1 {
 
 .dice {
   display: flex;
-  flex-wrap: wrap;
   border: double;
   justify-content: space-around;
   align-items: center;
@@ -21,7 +20,7 @@ h1 {
   height: 100px;
   width: 120px;
 
-  margin: 500px 0px 0px 10px;
+  margin: 300px 0px 0px 30px;
   border-radius: 12px;
 
   background-color: rgb(228, 34, 0);
@@ -54,11 +53,11 @@ h1 {
 } */
 
 #Roll_btn {
+  transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
-  transition: 0.1s;
   border-radius: 4px;
-  margin: 500px 0px 0px 10px;
+  margin: 500px 0px 0px 25px;
   height: 50px;
   width: 100px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -80,12 +79,11 @@ h1 {
 }
 
 #start_btn {
-  /* display: flex; */
-  /* justify-content: center; */
+  transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
   border-radius: 4px;
-  margin: 500px 0px 0px 20px;
+  margin: 500px 0px 0px 275px;
   justify-content: space-around;
   align-items: center;
   height: 50px;
@@ -117,8 +115,15 @@ h1 {
   font-size: 10px;
 }
 
-.Skatelog {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.SkateLog {
+  align-items: flex-start;
+  display: none;
+  margin: 0px 0px 0px 620px;
+  height: 180px;
+  width: 600px;
+  border: black solid 1px;
+  background-color: rgb(232, 232, 232);
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  font-size: small;
+  font-size: 24px;
 }
