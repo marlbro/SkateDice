@@ -96,7 +96,12 @@ rollBtn.addEventListener("click", function () {
       // changes text of Button during roll
       rollBtn.textContent = "Roll Again";
       rollBtn.style.color = "";
+
+      // displays Clear Dice
       startBtn.style.display = "";
+
+      // displays Roll Log
+      skateLog.style.margin = "0px 0px 0px 620px"; // margin: 0px 0px 0px 620px;
       skateLog.style.display = "block";
 
       // displays text in console
@@ -104,7 +109,6 @@ rollBtn.addEventListener("click", function () {
 
       // displays each roll in textarea box
       const rollsDisplay = rolls.join(" + ");
-
       skateLog.textContent = `${rollsDisplay}`;
     }, 1200);
 
@@ -116,9 +120,12 @@ rollBtn.addEventListener("click", function () {
 
     rollBtn.textContent = "Rolling..";
     rollBtn.style.color = "Yellow";
+
     startBtn.style.display = "none";
 
+    // log
     skateLog.style.display = "block";
+    skateLog.style.margin = "500px 0px 0px 20px"; // margin: 0px 0px 0px 620px;
 
     console.log(`Rolling dice...`);
   } else {
