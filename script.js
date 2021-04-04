@@ -107,7 +107,7 @@ rollBtn.addEventListener("click", function () {
 
     rollBtn.textContent = "Rolling..";
     rollBtn.style.color = "Yellow";
-    startBtn.style.display = "";
+    startBtn.style.display = "none";
 
     console.log(`Rolling dice...`);
   } else {
