@@ -1,32 +1,32 @@
 body {
-  height: 100vh;
-  display: flex;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
   background: linear-gradient(to bottom right, #333333, #a2a2a2);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
 }
 
 h1 {
-  display: inline-flex;
-  margin: 100px 0px 0px 0px;
+  /* position: absolute; */
+  /* margin: 50px 0px 0px 0px; */
 }
 
 .dice {
   display: flex;
   border: double;
-  justify-content: space-around;
   align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100px;
 
-  height: 100px;
-  width: 120px;
-
-  margin: 300px 0px 0px 30px;
+  margin: 200px 0px 0px 10px;
   border-radius: 12px;
 
   background-color: rgb(228, 34, 0);
 
   font-family: arial;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bolder;
 }
 
@@ -37,29 +37,20 @@ h1 {
 }
 
 /* .diceButtons {
- 
-} */
-
-/* #dice-1 {
-}
-
-#dice-2 {
-}
-
-#dice-3 {
-}
-
-#dice-4 {
+ align-items: center; 
+  flex-shrink: 1;
 } */
 
 #Roll_btn {
+  /* flex-wrap: wrap; */
   transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
   border-radius: 4px;
-  margin: 500px 0px 0px 25px;
+  /* margin: 500px 0px 0px 25px; */
   height: 50px;
   width: 100px;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bolder;
@@ -68,7 +59,8 @@ h1 {
 
 #Roll_btn:hover {
   opacity: 1;
-  background-color: rgb(32, 155, 73);
+  background-color: rgb(174, 174, 174);
+  color: rgb(59, 169, 59);
   cursor: pointer;
 }
 
@@ -83,8 +75,8 @@ h1 {
   color: white;
   background-color: rgb(38, 39, 41);
   border-radius: 4px;
-  margin: 500px 0px 0px 275px;
-  justify-content: space-around;
+  /* margin: 500px 0px 0px 500px; */
+  /* justify-content: space-around; */
   align-items: center;
   height: 50px;
   width: 100px;
@@ -108,7 +100,7 @@ h1 {
 }
 
 #title_name {
-  margin: 100px 0px 0px 100px;
+  /* margin: 100px 0px 0px 100px; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
@@ -116,11 +108,12 @@ h1 {
 }
 
 .SkateLog {
-  align-items: flex-start;
+  position: absolute;
+  flex-wrap: nowrap;
   display: none;
-  margin: 0px 0px 0px 620px;
-  height: 180px;
-  width: 600px;
+  margin: 300px 0px 0px 150px;
+  height: 120px;
+  width: 620px;
   border: black solid 1px;
   background-color: rgb(232, 232, 232);
   font-family: "Courier New", Courier, monospace;

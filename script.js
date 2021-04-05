@@ -29,6 +29,7 @@ function init() {
   rollBtn.textContent = "Roll Dice";
   startBtn.style.display = "none";
   skateLog.style.display = "none";
+  skateLog.textContent = "";
 }
 
 startBtn.addEventListener("click", init);
@@ -66,8 +67,6 @@ const diceArr4 = [
 // trick-specific combinations using if/else statements?
 
 rollBtn.addEventListener("click", function () {
-  init();
-
   rolling = true;
 
   if ((rolling = true)) {
@@ -80,12 +79,24 @@ rollBtn.addEventListener("click", function () {
     const diceNum_3 = Math.trunc(Math.random() * 6);
     const diceNum_4 = Math.trunc(Math.random() * 6);
 
+    // displays dice before roll
+    dice1.classList = "dice";
+    dice2.classList = "dice";
+    dice3.classList = "dice";
+    dice4.classList = "dice";
+
+    ////// this code executes a few seconds after page is loaded
     setTimeout(() => {
+      rollBtn.textContent = "Next Roll";
+      rollBtn.style.color = "";
+
       // displays dice
       dice1.classList = "dice";
       dice2.classList = "dice";
       dice3.classList = "dice";
       dice4.classList = "dice";
+
+      // dice shuffle
 
       // places text content within each element
       dice1.textContent = diceArr1[diceNum_1].toLowerCase();
@@ -93,24 +104,30 @@ rollBtn.addEventListener("click", function () {
       dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
-      // changes text of Button during roll
-      rollBtn.textContent = "Roll Again";
-      rollBtn.style.color = "";
-
-      // displays Clear Dice
-      startBtn.style.display = "";
-
       // displays Roll Log
-      skateLog.style.margin = "0px 0px 0px 620px"; // margin: 0px 0px 0px 620px;
       skateLog.style.display = "block";
 
       // displays text in console
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box
-      const rollsDisplay = rolls.join(" + ");
-      skateLog.textContent = `${rollsDisplay}`;
+      const keepRolling = function (num) {
+        const skateRoll = rolls.join(" + ");
+        num = "";
+
+        num = num + skateRoll;
+        rolls.push(num);
+
+        skateLog.textContent = `${num}`;
+      };
+      keepRolling();
     }, 1200);
+    ///////
+
+    dice1.textContent = "..rolling";
+    dice2.textContent = "the";
+    dice3.textContent = "sk8";
+    dice4.textContent = "dice..";
 
     // 4 dice, all pushed into 1 array
     rolls.push(diceArr1[diceNum_1].toLowerCase());
@@ -118,16 +135,16 @@ rollBtn.addEventListener("click", function () {
     rolls.push(diceArr3[diceNum_3].toLowerCase());
     rolls.push(diceArr4[diceNum_4].toLowerCase());
 
-    rollBtn.textContent = "Rolling..";
+    rollBtn.textContent = "Rolling...";
     rollBtn.style.color = "Yellow";
 
     startBtn.style.display = "none";
-
-    // log
     skateLog.style.display = "block";
-    skateLog.style.margin = "500px 0px 0px 20px"; // margin: 0px 0px 0px 620px;
 
-    console.log(`Rolling dice...`);
+    // displays Clear Dice
+    startBtn.style.display = "";
+
+    console.log(`Rolling...`);
   } else {
     init();
   }
