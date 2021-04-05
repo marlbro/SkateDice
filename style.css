@@ -59,18 +59,19 @@ h1 {
 
 #Roll_btn:hover {
   opacity: 1;
-  background-color: rgb(174, 174, 174);
+  background-color: rgb(48, 48, 48);
   color: rgb(59, 169, 59);
   cursor: pointer;
 }
 
 #Roll_btn:active {
   background-color: rgb(216, 173, 1);
+  color: white;
   cursor: grabbing;
   transform: translateY(4px);
 }
 
-#start_btn {
+#startClear_btn {
   transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
@@ -87,12 +88,12 @@ h1 {
   border: black solid 2px;
 }
 
-#start_btn:hover {
+#startClear_btn:hover {
   background-color: rgb(174, 174, 174);
   color: black;
 }
 
-#start_btn:active {
+#startClear_btn:active {
   background-color: rgb(255, 255, 255);
   color: black;
   cursor: grabbing;

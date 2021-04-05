@@ -1,6 +1,6 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
-const startBtn = document.getElementById("start_btn");
+const startClearBtn = document.getElementById("startClear_btn");
 
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
@@ -27,12 +27,12 @@ function init() {
   dice4.textContent = "";
 
   rollBtn.textContent = "Roll Dice";
-  startBtn.style.display = "none";
+  startClearBtn.style.display = "none";
   skateLog.style.display = "none";
   skateLog.textContent = "";
 }
 
-startBtn.addEventListener("click", init);
+startClearBtn.addEventListener("click", init);
 
 init();
 
@@ -117,11 +117,12 @@ rollBtn.addEventListener("click", function () {
       // displays each roll in textarea box
       const keepRolling = function (num) {
         const skateRoll = rolls.join(" + ");
+
+        // argument receive converts to string
         num = "";
-
         num = num + skateRoll;
-        rolls.push(num);
 
+        rolls.push(num);
         skateLog.textContent = `${num}`;
       };
 
@@ -152,11 +153,11 @@ rollBtn.addEventListener("click", function () {
     rollBtn.textContent = "Rolling...";
     rollBtn.style.color = "Yellow";
 
-    startBtn.style.display = "none";
+    startClearBtn.style.display = "none";
     skateLog.style.display = "block";
 
     // displays Clear Dice
-    startBtn.style.display = "";
+    startClearBtn.style.display = "";
 
     console.log(`Rolling...`);
   } else {
