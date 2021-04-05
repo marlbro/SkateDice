@@ -27,6 +27,7 @@ function init() {
   dice4.textContent = "";
 
   rollBtn.textContent = "Roll Dice";
+  rollBtn.style.color = "";
   startClearBtn.style.display = "none";
   skateLog.style.display = "none";
   skateLog.textContent = "";
