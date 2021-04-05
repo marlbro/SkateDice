@@ -73,30 +73,16 @@ rollBtn.addEventListener("click", function () {
     // stores each roll
     const rolls = [];
 
-    // 4 different numbers -- prevents same iteration
+    // 4 different numbers -- prevents same iteration?
     const diceNum_1 = Math.trunc(Math.random() * 6);
     const diceNum_2 = Math.trunc(Math.random() * 6);
     const diceNum_3 = Math.trunc(Math.random() * 6);
     const diceNum_4 = Math.trunc(Math.random() * 6);
 
-    // displays dice before roll
-    dice1.classList = "dice";
-    dice2.classList = "dice";
-    dice3.classList = "dice";
-    dice4.classList = "dice";
-
     ////// this code executes a few seconds after page is loaded
     setTimeout(() => {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
-
-      // displays dice
-      dice1.classList = "dice";
-      dice2.classList = "dice";
-      dice3.classList = "dice";
-      dice4.classList = "dice";
-
-      // dice shuffle
 
       // places text content within each element
       dice1.textContent = diceArr1[diceNum_1].toLowerCase();
@@ -104,10 +90,28 @@ rollBtn.addEventListener("click", function () {
       dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
-      // displays Roll Log
-      skateLog.style.display = "block";
+      // shuffle dice index
+      function shuffle(arr) {
+        var currentIndex = rolls.length,
+          tempValue,
+          randomIndex;
 
-      // displays text in console
+        while (0 !== currentIndex) {
+          randomIndex = Math.trunc(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // swap
+          tempValue = rolls[currentIndex];
+          rolls[currentIndex] = rolls[randomIndex];
+          rolls[randomIndex] = tempValue;
+        }
+        return arr;
+      }
+
+      shuffle(rolls);
+
+      // displays Roll Log and logs to console
+      skateLog.style.display = "block";
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box
@@ -120,16 +124,26 @@ rollBtn.addEventListener("click", function () {
 
         skateLog.textContent = `${num}`;
       };
+
+      console.log(rolls);
+
       keepRolling();
     }, 1200);
     ///////
 
+    // displays dice BEFORE roll..
+    dice1.classList = "dice";
+    dice2.classList = "dice";
+    dice3.classList = "dice";
+    dice4.classList = "dice";
+
+    // .. with rolling the dice
     dice1.textContent = "..rolling";
     dice2.textContent = "the";
     dice3.textContent = "sk8";
     dice4.textContent = "dice..";
 
-    // 4 dice, all pushed into 1 array
+    // 4 seperate dice pushed into Rolls arr
     rolls.push(diceArr1[diceNum_1].toLowerCase());
     rolls.push(diceArr2[diceNum_2].toLowerCase());
     rolls.push(diceArr3[diceNum_3].toLowerCase());

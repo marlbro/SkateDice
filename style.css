@@ -8,8 +8,9 @@ body {
 }
 
 h1 {
+  display: block;
   /* position: absolute; */
-  /* margin: 50px 0px 0px 0px; */
+  margin: 0px 0px 0px 0px;
 }
 
 .dice {
