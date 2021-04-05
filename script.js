@@ -11,7 +11,7 @@ const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
 
 // game state variables
-let rolling;
+let rolling, roll;
 
 function init() {
   rolling = false;
@@ -30,6 +30,7 @@ function init() {
   startClearBtn.style.display = "none";
   skateLog.style.display = "none";
   skateLog.textContent = "";
+  clearTimeout(roll);
 }
 
 startClearBtn.addEventListener("click", init);
@@ -80,7 +81,7 @@ rollBtn.addEventListener("click", function () {
     const diceNum_4 = Math.trunc(Math.random() * 6);
 
     ////// this code executes a few seconds after page is loaded
-    setTimeout(() => {
+    roll = setTimeout(() => {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
 
