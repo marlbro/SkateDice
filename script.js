@@ -28,10 +28,13 @@ function init() {
 
   rollBtn.textContent = "Roll Dice";
   rollBtn.style.color = "";
+
   startClearBtn.style.display = "none";
+
   skateLog.style.display = "none";
   skateLog.textContent = "";
-  clearTimeout(roll);
+
+  clearTimeout(roll, 3000); // 3 seconds to stop roll
 }
 
 startClearBtn.addEventListener("click", init);
@@ -86,13 +89,19 @@ rollBtn.addEventListener("click", function () {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
 
+      //
+      dice1.style.background = "rgb(228, 34, 0)";
+      dice2.style.background = "rgb(228, 34, 0)";
+      dice3.style.background = "rgb(228, 34, 0)";
+      dice4.style.background = "rgb(228, 34, 0)";
+
       // places text content within each element
       dice1.textContent = diceArr1[diceNum_1].toLowerCase();
       dice2.textContent = diceArr2[diceNum_2].toLowerCase();
       dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
-      // shuffle dice index
+      // shuffle dice index ( stackoverflow :( )
       function shuffle(arr) {
         var currentIndex = rolls.length,
           tempValue,
@@ -142,9 +151,9 @@ rollBtn.addEventListener("click", function () {
 
     // .. with rolling the dice
     dice1.textContent = "..rolling";
-    dice2.textContent = "the";
-    dice3.textContent = "sk8";
-    dice4.textContent = "dice..";
+    dice2.textContent = "..the..";
+    dice3.textContent = "..sk8..";
+    dice4.textContent = "..dice..";
 
     // 4 seperate dice pushed into Rolls arr
     rolls.push(diceArr1[diceNum_1].toLowerCase());
@@ -157,6 +166,11 @@ rollBtn.addEventListener("click", function () {
 
     startClearBtn.style.display = "none";
     skateLog.style.display = "block";
+
+    dice1.style.background = "white";
+    dice2.style.background = "white";
+    dice3.style.background = "white";
+    dice4.style.background = "white";
 
     // displays Clear Dice
     startClearBtn.style.display = "";

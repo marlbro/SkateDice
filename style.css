@@ -3,6 +3,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: row;
+  align-content: center;
   /* flex-wrap: wrap; */
 }
 
@@ -17,8 +18,8 @@ h1 {
   border: double;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  width: 100px;
+  height: 100px;
+  width: 140px;
 
   margin: 200px 0px 0px 10px;
   border-radius: 12px;
@@ -26,7 +27,7 @@ h1 {
   background-color: rgb(228, 34, 0);
 
   font-family: arial;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bolder;
 }
 
@@ -43,11 +44,11 @@ h1 {
 
 #Roll_btn {
   /* flex-wrap: wrap; */
+  align-self: center;
   transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
   border-radius: 4px;
-  /* margin: 500px 0px 0px 25px; */
   height: 50px;
   width: 100px;
 
@@ -72,6 +73,7 @@ h1 {
 }
 
 #startClear_btn {
+  align-self: center;
   transition: 0.1s;
   color: white;
   background-color: rgb(38, 39, 41);
@@ -112,7 +114,7 @@ h1 {
   position: absolute;
   flex-wrap: nowrap;
   display: flex;
-  margin: 300px 0px 0px 170px;
+  margin: 600px 0px 0px 250px;
   width: 610px;
   border: black solid 1px;
   background-color: rgb(232, 232, 232);
