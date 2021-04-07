@@ -133,7 +133,7 @@ rollBtn.addEventListener("click", function () {
         num = "";
         num = num + skateRoll;
 
-        rolls.push(num);
+        // rolls.push(num);
         skateLog.textContent = `${num}`;
       };
 
