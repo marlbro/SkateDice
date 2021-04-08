@@ -7,22 +7,27 @@
     
     <link rel="stylesheet" href="style.css"></link>
     <title>Skate Dice</title>
+    <h1 id="title_name">Skate Dice (v.5) by William H.</h1>
   </head>
-  
-  <h1 id="title_name">Skate Dice (v.5) by William H.</h1>
   <body>
     
-    <button id="startClear_btn" class="diceButtons" name="Start Over">Clear Dice</button>
-
-    <textarea type="text" disabled class="SkateLog"></textarea>
-
-      
+    
+    
+    <div class="diceContainer">
       <div class="dice" id="dice-1"></div>
       <div class="dice" id="dice-2"></div>
       <div class="dice" id="dice-3"></div>
       <div class="dice" id="dice-4"></div>
-      
-      <button id="Roll_btn" class="diceButtons" name="Roll Dice">Roll Dice</button>
+    </div>
+
+    <div class="btnContainer">
+    <button id="startClear_btn" class="diceButtons" name="Start Over">Clear Dice</button>
+    <button id="Roll_btn" class="diceButtons" name="Roll Dice">Roll Dice</button>
+  </div>
+
+    <p class="skateLog_title" style="font-family: monospace; font-size: small; font-weight: bold;">Skate Log</p>
+    <textarea type="text" disabled class="SkateLog"></textarea>
+    
   </body>
   <script src="script.js"></script>
 </html>
