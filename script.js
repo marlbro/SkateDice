@@ -98,7 +98,7 @@ rollBtn.addEventListener("click", function () {
       // places text content within each element
       dice1.textContent = diceArr1[diceNum_1].toLowerCase();
       dice2.textContent = diceArr2[diceNum_2].toLowerCase();
-      dice3.textContent = diceArr3[diceNum_3].toLowerCase();
+      dice3.textCotntent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
       // shuffle dice index ( stackoverflow :( )
@@ -128,19 +128,18 @@ rollBtn.addEventListener("click", function () {
       // displays each roll in textarea box
       const keepRolling = function (num) {
         const skateRoll = rolls.join(" + ");
-
-        // argument receive converts to string
+        const log = [];
         num = "";
-        num = num + skateRoll;
+        log.push(num + skateRoll);
 
-        // rolls.push(num);
-        skateLog.textContent = `${num}`;
+        skateLog.textContent = `${log}`;
       };
 
       console.log(rolls);
 
       keepRolling();
     }, 1200);
+
     ///////
 
     // displays dice BEFORE roll..
@@ -150,7 +149,7 @@ rollBtn.addEventListener("click", function () {
     dice4.classList = "dice";
 
     // .. with rolling the dice
-    dice1.textContent = "..rolling";
+    dice1.textContent = "..rolling..";
     dice2.textContent = "..the..";
     dice3.textContent = "..sk8..";
     dice4.textContent = "..dice..";
