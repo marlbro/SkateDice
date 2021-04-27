@@ -34,7 +34,7 @@ h1 {
   text-align: center;
   align-content: center;
   margin: 10px 10px 10px 20px;
-  border: black;
+  border: black solid;
   border-radius: 12px;
 
   background-color: rgb(228, 34, 0);
