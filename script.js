@@ -98,7 +98,7 @@ rollBtn.addEventListener("click", function () {
       // places text content within each element
       dice1.textContent = diceArr1[diceNum_1].toLowerCase();
       dice2.textContent = diceArr2[diceNum_2].toLowerCase();
-      dice3.textCotntent = diceArr3[diceNum_3].toLowerCase();
+      dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
 
       // shuffle dice index ( stackoverflow :( )
