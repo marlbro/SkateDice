@@ -20,25 +20,30 @@ h1 {
 
 .diceContainer {
   display: grid;
-
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 10px;
 }
 
 .dice {
-  display: grid;
+  overflow: hidden;
+  display: flex;
   height: 100px;
   width: 120px;
-  text-align: center;
-  align-content: center;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  /* so the dice doesnt warp off the page */
+  margin-left: auto;
+  margin-right: auto;
   margin: 10px 10px 10px 20px;
+
   border: black solid;
   border-radius: 12px;
-
   background-color: rgb(228, 34, 0);
-
   font-family: arial;
   font-size: 24px;
   font-weight: bolder;
@@ -135,6 +140,9 @@ h1 {
   font-size: 24px;
 }
 
-.skateLog_title {
-  display: none;
+.SkateLog {
+  /*keeps textarea centered*/
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }

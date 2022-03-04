@@ -122,6 +122,7 @@ rollBtn.addEventListener("click", function () {
       shuffle(rolls);
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
+      skateLog.style.alignitems = "center";
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box
