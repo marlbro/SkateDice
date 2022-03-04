@@ -120,7 +120,6 @@ rollBtn.addEventListener("click", function () {
       }
 
       shuffle(rolls);
-
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
       console.log(rolls.join(" + "));
