@@ -1,7 +1,6 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
 const startClearBtn = document.getElementById("startClear_btn");
-
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
 const dice3 = document.getElementById("dice-3");
@@ -179,3 +178,4 @@ rollBtn.addEventListener("click", function () {
     init();
   }
 });
+
