@@ -129,6 +129,10 @@ rollBtn.addEventListener("click", function () {
       const keepRolling = function (num) {
         const skateRoll = rolls.join(" + ");
         const log = [];
+
+        //must sum each roll into a list? within the log
+        const addlog = [];
+
         num = "";
         log.push(num + skateRoll);
 
