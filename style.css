@@ -12,7 +12,12 @@ h1 {
 }
 
 #title_name {
-  /* margin: 100px 0px 0px 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content: space-around;
+  
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 18px;
@@ -52,7 +57,7 @@ h1 {
 .dice:hover {
   transition: 0.1s;
   opacity: 1;
-  color: rgb(253, 210, 210);
+  color: rgb(255, 230, 0);
 }
 
 .btnContainer {

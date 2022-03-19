@@ -1,7 +1,6 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
 const startClearBtn = document.getElementById("startClear_btn");
-
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
 const dice3 = document.getElementById("dice-3");
@@ -123,6 +122,7 @@ rollBtn.addEventListener("click", function () {
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
       skateLog.style.alignitems = "center";
+      
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box
@@ -183,3 +183,4 @@ rollBtn.addEventListener("click", function () {
     init();
   }
 });
+
