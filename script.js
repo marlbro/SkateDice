@@ -8,6 +8,7 @@ const dice4 = document.getElementById("dice-4");
 
 const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
+const titlebar = document.querySelector(".titlebar");
 
 // game state variables
 let rolling, roll;
@@ -32,6 +33,7 @@ function init() {
 
   skateLog.style.display = "none";
   skateLog.textContent = "";
+  titlebar.textContent = "";
 
   clearTimeout(roll, 3000); // 3 seconds to stop roll
 }
@@ -49,6 +51,7 @@ const diceArr1 = [
   "backside",
   "VARIATION",
 ];
+
 const diceArr2 = [
   "SK8DICE!",
   "Kickflip",
@@ -57,7 +60,9 @@ const diceArr2 = [
   "Heelflip",
   "VARIATION",
 ];
+
 const diceArr3 = ["SK8DICE!", "360°", "180°", "360°", "180°", "VARIATION"];
+
 const diceArr4 = [
   "SK8DICE!",
   "Regular",
@@ -87,6 +92,7 @@ rollBtn.addEventListener("click", function () {
     roll = setTimeout(() => {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
+      skateLog.style.display = "block";
 
       //
       dice1.style.background = "rgb(228, 34, 0)";
@@ -114,6 +120,9 @@ rollBtn.addEventListener("click", function () {
           tempValue = rolls[currentIndex];
           rolls[currentIndex] = rolls[randomIndex];
           rolls[randomIndex] = tempValue;
+
+          // log
+          titlebar.textContent = "Skate Log";
         }
         return arr;
       }
@@ -122,7 +131,7 @@ rollBtn.addEventListener("click", function () {
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
       skateLog.style.alignitems = "center";
-      
+
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box
@@ -131,12 +140,14 @@ rollBtn.addEventListener("click", function () {
         const log = [];
 
         //must sum each roll into a list? within the log
-        const addlog = [];
-
         num = "";
         log.push(num + skateRoll);
 
-        skateLog.textContent = `${log}`;
+        const addLog = (skateLog.textContent = `${log}`);
+        addLog;
+
+        const sum = rolls.join(addLog);
+        sum;
       };
 
       console.log(rolls);
@@ -164,11 +175,11 @@ rollBtn.addEventListener("click", function () {
     rolls.push(diceArr3[diceNum_3].toLowerCase());
     rolls.push(diceArr4[diceNum_4].toLowerCase());
 
-    rollBtn.textContent = "Rolling...";
+    rollBtn.textContent = "Rolling..";
     rollBtn.style.color = "Yellow";
 
     startClearBtn.style.display = "none";
-    skateLog.style.display = "block";
+    // skateLog.style.display = "block";
 
     dice1.style.background = "white";
     dice2.style.background = "white";
@@ -183,4 +194,3 @@ rollBtn.addEventListener("click", function () {
     init();
   }
 });
-
