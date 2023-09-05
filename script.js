@@ -44,7 +44,7 @@ init();
 
 // dice arrays
 const diceArr1 = [
-  "sk8dice!",
+  "SK8DICE!",
   "frontside",
   "backside",
   "frontside",
@@ -67,8 +67,8 @@ const diceArr4 = [
   "SK8DICE!",
   "Regular",
   "Fakie",
-  "Regular",
-  "Fakie",
+  "Switch",
+  "Nollie",
   "VARIATION",
 ];
 

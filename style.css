@@ -1,3 +1,5 @@
+
+
 body {
   background: linear-gradient(to bottom right, #333333, #a2a2a2);
   height: 300vh;
@@ -140,12 +142,15 @@ h1 {
 }
 
 .titlebar {
+  display:block;
   text-align: center;
+  margin-right: 450px;
   justify-content: center;
   font-family: monospace;
   font-size: 12px;
   padding-top: 20px;
 }
+
 
 .SkateLog {
   /*keeps textarea centered*/
@@ -176,4 +181,10 @@ h1 {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 18px;
+}
+
+.game {
+  display: flex;
+  
+
 }
