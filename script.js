@@ -72,7 +72,6 @@ const diceArr4 = [
   "VARIATION",
 ];
 
-
 rollBtn.addEventListener("click", function () {
   rolling = true;
 
@@ -132,7 +131,7 @@ rollBtn.addEventListener("click", function () {
 
       console.log(rolls.join(" + "));
 
-      // displays each roll in textarea box
+      // displays each roll in textarea box????
       const keepRolling = function (num) {
         const skateRoll = rolls.join(" + ");
         const log = [];
@@ -144,8 +143,10 @@ rollBtn.addEventListener("click", function () {
         const addLog = (skateLog.textContent = `${log}`);
         addLog;
 
-        const sum = rolls.join(addLog);
-        sum;
+        //idk what this is yet
+        const sum = [];
+        sum + addLog;
+        return sum;
       };
 
       console.log(rolls);
