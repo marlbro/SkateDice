@@ -72,8 +72,6 @@ const diceArr4 = [
   "VARIATION",
 ];
 
-// element-specific images using if/else statements?
-// trick-specific combinations using if/else statements?
 
 rollBtn.addEventListener("click", function () {
   rolling = true;
