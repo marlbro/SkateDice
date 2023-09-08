@@ -79,6 +79,9 @@ rollBtn.addEventListener("click", function () {
     // stores each roll
     const rolls = [];
 
+    // all rolls logged?
+    const sum = [];
+
     // 4 different numbers -- prevents same iteration?
     const diceNum_1 = Math.trunc(Math.random() * 6);
     const diceNum_2 = Math.trunc(Math.random() * 6);
@@ -144,12 +147,12 @@ rollBtn.addEventListener("click", function () {
         addLog;
 
         //idk what this is yet
-        const sum = [];
-        sum + addLog;
+        sum.push(`${log}`);
         return sum;
       };
 
       console.log(rolls);
+      console.log(sum);
 
       keepRolling();
     }, 1200);
