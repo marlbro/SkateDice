@@ -1,9 +1,7 @@
-
-html, main {
+html,
+main {
   min-height: 100%;
-
 }
-
 
 body {
   background: linear-gradient(to bottom right, #333333, #a2a2a2);
@@ -82,6 +80,52 @@ h1 {
   padding-bottom: auto;
 }
 
+.version {
+  text-align: center;
+  font-size: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titlebar {
+  display: block;
+  text-align: center;
+  margin-right: 450px;
+
+  justify-content: center;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+.mainBtn {
+  display: flex;
+  text-align: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px;
+}
+.SkateLog {
+  display: block;
+  margin: 10px;
+  width: 500px;
+  height: 32px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: black solid 1px;
+  background-color: rgb(232, 232, 232);
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.game {
+  display: flex;
+}
+
 #Roll_btn {
   display: grid;
   align-content: center;
@@ -140,54 +184,4 @@ h1 {
   color: black;
   cursor: grabbing;
   transform: translateY(4px);
-}
-
-.version {
-  text-align: center;
-  font-size: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.titlebar {
-  display:block;
-  text-align: center;
-  margin-right: 450px;
-
-
-  justify-content: center;
-  font-family: monospace;
-  font-size: 12px;
-  font-weight: bolder;
-  padding-top: 20px;
-}
-
-
-.mainBtn {
-  display: flex;
-  text-align: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 20px;
-}
-.SkateLog {
-  display: block;
-  margin: 10px;
-  width: 570px;
-  height: 32px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-
-  border: black solid 1px;
-  background-color: rgb(232, 232, 232);
-
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.game {
-  display: flex;
-  
-
 }
