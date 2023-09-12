@@ -141,13 +141,14 @@ rollBtn.addEventListener("click", function () {
 
         //must sum each roll into a list? within the log
         num = "";
-        log.push(num + skateRoll);
+        log.push(num, skateRoll);
 
         const addLog = (skateLog.textContent = `${log}`);
         addLog;
 
         //idk what this is yet
-        sum.push(`${log}`);
+        // sum = [];
+        sum.push(skateRoll);
         return sum;
       };
 
