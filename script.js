@@ -123,11 +123,16 @@ rollBtn.addEventListener("click", function () {
 
           // log
           titlebar.textContent = "Skate Log";
+
+          // sum.push(rolls);
         }
         return arr;
+
+       
       }
 
       shuffle(rolls);
+
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
       skateLog.style.alignitems = "center";
@@ -136,29 +141,34 @@ rollBtn.addEventListener("click", function () {
 
       // displays each roll in textarea box????
       const keepRolling = function (num) {
-        const skateRoll = rolls.join(" + ");
+
+        // main log committed to mem
         const log = [];
 
-        //must sum each roll into a list? within the log
-        num = "";
-        log.push(num, skateRoll);
+        // the updatedlog is an Array that will be updated
+        let updatedLog = []; 
+        
+        // each roll output written and converted to text
+        const skateRoll = rolls.join(" + ");
+        num = ""
 
-        const addLog = (skateLog.textContent = `${log}`);
-        addLog;
+        
+        // for the text box --> num is empty string --> converts log into text 
+        log.push(num + skateRoll);
+        
 
-        //idk what this is yet
-        // sum = [];
-        sum.push(skateRoll);
-        return sum;
+       skateLog.textContent = `${log}`;
+        
+            
       };
 
       console.log(rolls);
-      console.log(sum);
+      // console.log(sum `{Test (should be empty)`);
 
       keepRolling();
     }, 1200);
 
-    ///////
+   
 
     // displays dice BEFORE roll..
     dice1.classList = "dice";
