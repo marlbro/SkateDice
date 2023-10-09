@@ -122,7 +122,7 @@ rollBtn.addEventListener("click", function () {
           rolls[randomIndex] = tempValue;
 
           // log
-          titlebar.textContent = "Skate Log";
+          titlebar.textContent = "Game Log";
 
           // sum.push(rolls);
         }
@@ -157,7 +157,11 @@ rollBtn.addEventListener("click", function () {
         log.push(num + skateRoll);
         
 
-       skateLog.textContent = `${log}`;
+        for (var i; i <= log.length; i++) {
+
+          skateLog.textContent = `${log + updatedLog}`;
+        }
+
         
             
       };
