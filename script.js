@@ -10,11 +10,14 @@ const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
 const titlebar = document.querySelector(".titlebar");
 
+
 // game state variables
-let rolling, roll;
+let rolling, round, roll;
 
 function init() {
+  
   rolling = false;
+  round = 1
 
   dice1.classList = "hidden";
   dice2.classList = "hidden";
@@ -74,26 +77,28 @@ const diceArr4 = [
 
 rollBtn.addEventListener("click", function () {
   rolling = true;
-
+  
+  
   if ((rolling = true)) {
     // stores each roll
     const rolls = [];
-
+    
     // all rolls logged?
     const sum = [];
-
+    const roundNum = round++;
+    
     // 4 different numbers -- prevents same iteration?
     const diceNum_1 = Math.trunc(Math.random() * 6);
     const diceNum_2 = Math.trunc(Math.random() * 6);
     const diceNum_3 = Math.trunc(Math.random() * 6);
     const diceNum_4 = Math.trunc(Math.random() * 6);
-
+    
     ////// this code executes a few seconds after page is loaded
     roll = setTimeout(() => {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
       skateLog.style.display = "block";
-
+      
       //
       dice1.style.background = "rgb(228, 34, 0)";
       dice2.style.background = "rgb(228, 34, 0)";
@@ -105,7 +110,7 @@ rollBtn.addEventListener("click", function () {
       dice2.textContent = diceArr2[diceNum_2].toLowerCase();
       dice3.textContent = diceArr3[diceNum_3].toLowerCase();
       dice4.textContent = diceArr4[diceNum_4].toLowerCase();
-
+      
       // shuffle dice index ( stackoverflow :( )
       function shuffle(arr) {
         var currentIndex = rolls.length,
@@ -120,10 +125,10 @@ rollBtn.addEventListener("click", function () {
           tempValue = rolls[currentIndex];
           rolls[currentIndex] = rolls[randomIndex];
           rolls[randomIndex] = tempValue;
-
+          
           // log
-          titlebar.textContent = "Game Log";
-
+          titlebar.textContent = "Roll #" + `${roundNum}`;
+          
           // sum.push(rolls);
         }
         return arr;
@@ -142,25 +147,31 @@ rollBtn.addEventListener("click", function () {
       // displays each roll in textarea box????
       const keepRolling = function (num) {
 
+        
+        
+
+
+
         // main log committed to mem
         const log = [];
 
         // the updatedlog is an Array that will be updated
         let updatedLog = []; 
+        updatedLog =+ log
         
         // each roll output written and converted to text
         const skateRoll = rolls.join(" + ");
         num = ""
 
         
-        // for the text box --> num is empty string --> converts log into text 
+        // for the text box --> num is empty string  
         log.push(num + skateRoll);
         
 
-        for (var i; i <= log.length; i++) {
+        // for (var i; i <= log.length; i++) {
 
           skateLog.textContent = `${log + updatedLog}`;
-        }
+        // }
 
         
             
@@ -194,6 +205,7 @@ rollBtn.addEventListener("click", function () {
 
     rollBtn.textContent = "Rolling..";
     rollBtn.style.color = "Yellow";
+
 
     startClearBtn.style.display = "none";
     // skateLog.style.display = "block";
