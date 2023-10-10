@@ -1,7 +1,6 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
 const startClearBtn = document.getElementById("startClear_btn");
-const logArea = document.getElementById("logArea")
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
 const dice3 = document.getElementById("dice-3");
@@ -10,6 +9,7 @@ const dice4 = document.getElementById("dice-4");
 const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
 const titlebar = document.querySelector(".titlebar");
+const list = document.getElementById("list")
 
 
 // game state variables
@@ -134,6 +134,8 @@ rollBtn.addEventListener("click", function () {
           // log
           titlebar.textContent = "Roll Number: #" + `${roundNum}`;
           
+
+        // logArea.innerHTML =;
           // sum.push(rolls);
         }
         return arr;
@@ -141,6 +143,7 @@ rollBtn.addEventListener("click", function () {
        
       }
 
+      // ***** ROLL HAPPENS ***** //
       shuffle(rolls);
 
       // displays Roll Log and logs to console
@@ -154,30 +157,24 @@ rollBtn.addEventListener("click", function () {
       const keepRolling = function() {
 
         // each roll output written and converted to text
+
         const skateRoll = rolls.join(" + ");
         num = ""
         
-        // main log committed to mem
-        let summarylog = [];
-        // for the text box -->  
-        summarylog.push(skateRoll);
-
-        let skateList = "<ul>";
-        skateRoll.forEach(shuffle);
-        skateList += "</ul>";
-
-        logArea.innerHTML = `${skateList}`;
+        // list.innerHTML += `<li>`
+        skateLog.textContent += " " +  rolls.join(" + "); 
         
-       
 
+        // const value = function() {
+        //    let text = "<li>"
+        //    logArea.innerHTML = text
+        //    text += "</li>"
+        //  };
         
-        console.log(summarylog)
+        //  rolls.forEach(value);
         
-          
-        // html output
-        // skateLog.textContent += " " +  rolls.join(" + "); 
-      
-      };
+         };
+
       // console.log(rolls);
      
       keepRolling();
