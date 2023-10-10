@@ -1,6 +1,7 @@
 // html elements
 const rollBtn = document.getElementById("Roll_btn");
 const startClearBtn = document.getElementById("startClear_btn");
+const logArea = document.getElementById("logArea")
 const dice1 = document.getElementById("dice-1");
 const dice2 = document.getElementById("dice-2");
 const dice3 = document.getElementById("dice-3");
@@ -85,7 +86,11 @@ rollBtn.addEventListener("click", function () {
     
     // all rolls logged?
     const sum = [];
+
+
+    //round Numbers
     const roundNum = round++;
+    let currentRound;
     
     // 4 different numbers -- prevents same iteration?
     const diceNum_1 = Math.trunc(Math.random() * 6);
@@ -127,7 +132,7 @@ rollBtn.addEventListener("click", function () {
           rolls[randomIndex] = tempValue;
           
           // log
-          titlebar.textContent = "Roll #" + `${roundNum}`;
+          titlebar.textContent = "Roll Number: #" + `${roundNum}`;
           
           // sum.push(rolls);
         }
@@ -141,45 +146,40 @@ rollBtn.addEventListener("click", function () {
       // displays Roll Log and logs to console
       skateLog.style.display = "block";
       skateLog.style.alignitems = "center";
+      skateLog.style.fontweight = "bolder";
 
       console.log(rolls.join(" + "));
 
       // displays each roll in textarea box????
-      const keepRolling = function (num) {
+      const keepRolling = function() {
 
-        
-        
-
-
-
-        // main log committed to mem
-        const log = [];
-
-        // the updatedlog is an Array that will be updated
-        let updatedLog = []; 
-        updatedLog =+ log
-        
         // each roll output written and converted to text
         const skateRoll = rolls.join(" + ");
         num = ""
+        
+        // main log committed to mem
+        let summarylog = [];
+        // for the text box -->  
+        summarylog.push(skateRoll);
+
+        let skateList = "<ul>";
+        skateRoll.forEach(shuffle);
+        skateList += "</ul>";
+
+        logArea.innerHTML = `${skateList}`;
+        
+       
 
         
-        // for the text box --> num is empty string  
-        log.push(num + skateRoll);
+        console.log(summarylog)
         
-
-        // for (var i; i <= log.length; i++) {
-
-          skateLog.textContent = `${log + updatedLog}`;
-        // }
-
-        
-            
+          
+        // html output
+        // skateLog.textContent += " " +  rolls.join(" + "); 
+      
       };
-
-      console.log(rolls);
-      // console.log(sum `{Test (should be empty)`);
-
+      // console.log(rolls);
+     
       keepRolling();
     }, 1200);
 
