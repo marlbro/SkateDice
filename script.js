@@ -170,7 +170,7 @@ rollBtn.addEventListener("click", function () {
 
         // for (var i; i <= log.length; i++) {
 
-          skateLog.textContent = `${log + updatedLog}`;
+          skateLog.textContent = `${log}`;
         // }
 
         
