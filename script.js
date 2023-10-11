@@ -147,7 +147,7 @@ rollBtn.addEventListener("click", function () {
       // displays each roll in textarea box????
       const keepRolling = function (num) {
 
-        
+        document.getElementById('list').innerHTML = '<li>';      
         
 
 
@@ -155,31 +155,22 @@ rollBtn.addEventListener("click", function () {
         // main log committed to mem
         const log = [];
 
-        // the updatedlog is an Array that will be updated
-        let updatedLog = []; 
-        updatedLog =+ log
-        
-        // each roll output written and converted to text
+        // lands on each roll // displays each dice
         const skateRoll = rolls.join(" + ");
-        num = ""
 
-        
+        // each roll number??...
+        num = ""
+ 
         // for the text box --> num is empty string  
         log.push(num + skateRoll);
         
-
-        // for (var i; i <= log.length; i++) {
-
-          skateLog.textContent = `${log}`;
-        // }
-
+        skateLog.textContent += ' ' + `${log}`;
         
-            
+        
       };
 
-      console.log(rolls);
-      // console.log(sum `{Test (should be empty)`);
-
+      // console.log(rolls);
+    
       keepRolling();
     }, 1200);
 
