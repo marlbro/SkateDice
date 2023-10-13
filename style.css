@@ -106,8 +106,9 @@ h1 {
   /* position: static; */
   display: block;
 
-  inline-size: 470px;
+  inline-size: 450px;
   margin: 10px;
+  overflow-wrap: break-word;
   /* width: 500px; */
 
   /* margin: auto;
