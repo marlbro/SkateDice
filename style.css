@@ -103,13 +103,21 @@ h1 {
   margin: 0px;
 }
 .SkateLog {
+  /* position: static; */
   display: block;
+
+  inline-size: 470px;
   margin: 10px;
-  width: 500px;
+  /* width: 500px; */
+
+  /* margin: auto;
+  width: auto; */
+
   height: 32px;
 
   text-align: left;
   justify-content: center;
+
   margin-left: auto;
   margin-right: auto;
 

@@ -151,6 +151,7 @@ rollBtn.addEventListener("click", function () {
         num = "";
         log.push(num + skateRoll);
 
+        skateLog.insertAdjacentText = "li";
         skateLog.textContent += " " + `${log}`;
       };
 
