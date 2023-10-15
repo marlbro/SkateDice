@@ -9,6 +9,7 @@ const dice4 = document.getElementById("dice-4");
 const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
 const titlebar = document.querySelector(".titlebar");
+const roundNumber = document.querySelector(".RndNum")
 
 // game state variables
 let rolling, round, roll;
@@ -35,6 +36,7 @@ function init() {
   skateLog.style.display = "none";
   skateLog.textContent = "";
   titlebar.textContent = "";
+  roundNumber.textContent = "";
 
   clearTimeout(roll, 3000); // 3 seconds to stop roll
 }
@@ -95,6 +97,8 @@ rollBtn.addEventListener("click", function () {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
       skateLog.style.display = "block";
+      roundNumber.textContent = "--->";
+
 
       //
       dice1.style.background = "rgb(228, 34, 0)";
@@ -125,8 +129,9 @@ rollBtn.addEventListener("click", function () {
 
           // log
           titlebar.textContent = "Roll #" + `${roundNum}`;
-
+          roundNumber.textContent = "**Placeholder for Current Round**";
           // sum.push(rolls);
+          
         }
         return arr;
       }
@@ -137,22 +142,23 @@ rollBtn.addEventListener("click", function () {
       skateLog.style.display = "block";
       skateLog.style.alignitems = "center";
 
+      // displays each roll in textarea box????
       console.log(rolls.join(" + "));
 
-      // displays each roll in textarea box????
-      const keepRolling = function (num) {
-        // main log committed to mem
-        const log = [];
 
-        // each roll stored
+      // KEEP ROLLING
+      const keepRolling = function (num) {
+
+        const log = [];
         const skateRoll = rolls.join(" + ");
 
         // empty string // for the text box
         num = "";
+        str = " ";
         log.push(num + skateRoll);
 
-        skateLog.insertAdjacentText = "li";
-        skateLog.textContent += " " + `${log}`;
+        skateLog.textContent += str + roundNum + ")" + `${log}`;
+       
       };
 
       // console.log(rolls);
@@ -183,6 +189,7 @@ rollBtn.addEventListener("click", function () {
 
     startClearBtn.style.display = "none";
     // skateLog.style.display = "block";
+    // skateLog.style.fontWeight = "normal" 
 
     dice1.style.background = "white";
     dice2.style.background = "white";

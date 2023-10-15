@@ -102,32 +102,39 @@ h1 {
   margin-right: auto;
   margin: 0px;
 }
+
+.log {
+  word-wrap: break-word;
+
+}
+
+.RndNum {
+  display: inline-block;
+  font-size: 20px;
+}
 .SkateLog {
   /* position: static; */
-  display: block;
+  display: inline-block;
+  box-sizing: content-box;
 
-  inline-size: 450px;
-  margin: 10px;
-  overflow-wrap: break-word;
-  /* width: 500px; */
+  width: 520px;
+  inline-size: 30rem;
 
-  /* margin: auto;
-  width: auto; */
+  /* text-align: left; */
+  /* text-wrap: wrap ; */
 
-  height: 32px;
-
-  text-align: left;
   justify-content: center;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 
-  border: black solid 1px;
+  border: black solid 3px;
+  padding: 30px;
   background-color: rgb(232, 232, 232);
 
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  /* word-wrap: break-word; */
 }
 
 .game {
