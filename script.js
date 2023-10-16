@@ -9,7 +9,7 @@ const dice4 = document.getElementById("dice-4");
 const allDice = document.querySelector(".dice");
 const skateLog = document.querySelector(".SkateLog");
 const titlebar = document.querySelector(".titlebar");
-const roundNumber = document.querySelector(".RndNum")
+const roundNumber = document.querySelector(".RndNum");
 
 // game state variables
 let rolling, round, roll;
@@ -97,8 +97,6 @@ rollBtn.addEventListener("click", function () {
       rollBtn.textContent = "Next Roll";
       rollBtn.style.color = "";
       skateLog.style.display = "block";
-      roundNumber.textContent = "--->";
-
 
       //
       dice1.style.background = "rgb(228, 34, 0)";
@@ -129,9 +127,8 @@ rollBtn.addEventListener("click", function () {
 
           // log
           titlebar.textContent = "Roll #" + `${roundNum}`;
-          roundNumber.textContent = "**Placeholder for Current Round**";
+          // roundNumber.textContent = "**Placeholder for Current Round**";
           // sum.push(rolls);
-          
         }
         return arr;
       }
@@ -145,20 +142,26 @@ rollBtn.addEventListener("click", function () {
       // displays each roll in textarea box????
       console.log(rolls.join(" + "));
 
-
       // KEEP ROLLING
       const keepRolling = function (num) {
+        // const log = [];
+        // const skateRoll = rolls.join(" + ");
 
-        const log = [];
-        const skateRoll = rolls.join(" + ");
-
-        // empty string // for the text box
+        // empty string
         num = "";
         str = " ";
-        log.push(num + skateRoll);
 
-        skateLog.textContent += str + roundNum + ")" + `${log}`;
-       
+        // MAKE NEW ELEMENT WITH EACH ROLL (to prevent overlapping)
+        for (let i = 0; i < rolls.length; i++) {
+          let ol = document.createElement("ol");
+          let str = document.createTextNode("\n");
+          // let br = document.createElement("br");
+          ol.innerText = rolls[i];
+          skateLog.appendChild(ol);
+          skateLog.append(str);
+        }
+
+        skateLog.textContent += "\n ";
       };
 
       // console.log(rolls);
@@ -189,14 +192,14 @@ rollBtn.addEventListener("click", function () {
 
     startClearBtn.style.display = "none";
     // skateLog.style.display = "block";
-    // skateLog.style.fontWeight = "normal" 
+    // skateLog.style.fontWeight = "normal"
 
     dice1.style.background = "white";
     dice2.style.background = "white";
     dice3.style.background = "white";
     dice4.style.background = "white";
 
-    // displays Clear Dice
+    // clears Dice
     startClearBtn.style.display = "";
 
     console.log(`Rolling...`);

@@ -4,8 +4,9 @@ main {
 }
 
 body {
-  background: linear-gradient(to bottom right, #333333, #a2a2a2);
+  background: linear-gradient(to bottom right, #8d74749b, #662c2c84);
   min-height: 100%;
+  max-width: 960px;
 
   /* flex-wrap: wrap; */
 }
@@ -104,37 +105,40 @@ h1 {
 }
 
 .log {
-  word-wrap: break-word;
+  box-sizing: content-box;
+}
 
+ol {
+  text-wrap: balance;
+  margin: 10px 0px;
+  /* size: auto; */
+  display: inline;
+  inline-size: 450px;
+  word-wrap: break-word;
 }
 
 .RndNum {
   display: inline-block;
   font-size: 20px;
 }
+
 .SkateLog {
-  /* position: static; */
   display: inline-block;
   box-sizing: content-box;
-
-  width: 520px;
-  inline-size: 30rem;
-
-  /* text-align: left; */
-  /* text-wrap: wrap ; */
-
-  justify-content: center;
+  text-align: left;
 
   margin: auto;
+  inline-size: 30rem;
+
+  letter-spacing: -1px;
 
   border: black solid 3px;
-  padding: 30px;
+  padding: 10px;
   background-color: rgb(232, 232, 232);
 
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 16px;
-  /* word-wrap: break-word; */
 }
 
 .game {
