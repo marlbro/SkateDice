@@ -160,8 +160,6 @@ rollBtn.addEventListener("click", function () {
           skateLog.appendChild(ol);
           skateLog.append(str);
         }
-
-        skateLog.textContent += "\n ";
       };
 
       // console.log(rolls);
